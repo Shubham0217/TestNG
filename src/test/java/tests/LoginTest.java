@@ -31,7 +31,7 @@ public class LoginTest extends BaseTest {
         WebElement dashboardHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h6[text()='Dashboard']")));
 
         Assert.assertTrue(dashboardHeader.isDisplayed(), "Dashboard is not displayed after login.");
-        System.out.println("Header natched");
+        System.out.println("Header Matched");
         
     }
 
