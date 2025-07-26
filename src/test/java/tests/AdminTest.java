@@ -38,10 +38,9 @@ public class AdminTest extends BaseTest{
 		Assert.assertTrue(dashboard.isDisplayed(), "Dashboard is not displayed after login.");
 		
 	}
-	@Test(priority = 2)
-	public void AdminSettings() throws InterruptedException
 	
-	{
+	@Test(priority = 2)
+	public void AdminSettings() {
 		AdminPage admin = new AdminPage(driver);
 		
 		WebElement admintext = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(.,'Admin')]")));
@@ -50,9 +49,10 @@ public class AdminTest extends BaseTest{
 		
 		admin.AdminClick();
 		
-		Thread.sleep(2000);
+		WebElement admintitle = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+		Assert.assertTrue(admintitle.isDisplayed(), "Text not displayed");
 		
-		
+
 	}
 	
 	
